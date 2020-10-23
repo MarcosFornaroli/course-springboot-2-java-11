@@ -24,4 +24,7 @@ public class UserService {
 		return obj.get();
 	}
 
+	public List<User> findByName(String name) {
+		return userRepository.findByName(name);
+	}
 }
