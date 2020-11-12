@@ -61,6 +61,7 @@ public class TestConfig implements CommandLineRunner {
 
 		productRepository.saveAll(Arrays.asList(p1, p2, p3, p4, p5));
 		
+		// Usando para relacionar product com category
 		p1.getCategories().add(cat2);
 		p2.getCategories().add(cat1);
 		p2.getCategories().add(cat3);
@@ -69,6 +70,17 @@ public class TestConfig implements CommandLineRunner {
 		p5.getCategories().add(cat2);
 		
 		productRepository.saveAll(Arrays.asList(p1, p2, p3, p4, p5));
+
+		// Usando para relacionar category com product
+		//cat2.getProducts().add(p1);
+		//cat1.getProducts().add(p2);
+		//cat3.getProducts().add(p2);
+		//cat3.getProducts().add(p3);
+		//cat3.getProducts().add(p4);
+		//cat2.getProducts().add(p5);
+		
+		//categoryRepository.saveAll(Arrays.asList(cat1, cat2, cat3));
+		
 	}
 
 }
