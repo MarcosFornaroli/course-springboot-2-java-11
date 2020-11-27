@@ -27,4 +27,8 @@ public class UserService {
 	public List<User> findByName(String name) {
 		return userRepository.findByName(name);
 	}
+	
+	public User insert (User obj) {
+		return userRepository.save(obj);
+	}
 }
